@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    public class student
+    {
+        public string name;
+        public string surname;
+        public int age;
+    }
+    public override string ToString()
+        {
+            return age + " " + surname + " " + name;
+        }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            student j = new student();
+            j.name = " Joe ";
+            j.surname = " Phillips ";
+            j.age = 19;
+            Console.WriteLine(j.ToString());
+        }
+    }
+}
