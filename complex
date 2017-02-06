@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    public class Student
+    {
+        public string name;
+        public string lastname;
+        public int age;
+        public Student()
+        {
+            name = "Sam";
+            lastname = "Wise";
+            age = 25;
+        }
+       
+        public Student(string a, string b, int c)
+        {
+            this.name = a;
+            this.lastname = b;
+            this.age = c;
+        }
+
+        public override string ToString()
+        {
+            return this.age + " " + this.lastname + " " + this.name;
+        }
+    }
+
+    class Program
+    {
+      
+       
+
+        static void Main(string[] args)
+        {
+             List<Student> list = new List<Student>();
+            while (true)
+            {
+              
+                string name = Console.ReadLine();
+                string lastname = Console.ReadLine();
+                int age = int.Parse(Console.ReadLine());
+                Student a = new Student(name, lastname, age);
+                list.Add(a);
+
+                foreach (Student k in list)
+                {
+                    Console.WriteLine(k.ToString());
+                }
+
+                Console.WriteLine("VVedite chislo 0 esli stop");
+                int proverka = int.Parse(Console.ReadLine());
+                if (proverka == 0) { break; }
+            }
+        }
+    }
+}
